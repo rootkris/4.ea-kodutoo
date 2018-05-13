@@ -28,11 +28,10 @@ function retrieveAllData(){
 }
 
 function removeOneData(task){
-  let index = Number(this.task)
   storedData = JSON.parse(localStorage.getItem("tasks"))
-  let data = storedData.splice(index, 1)
+  let data = storedData.splice(task, 1)
   localStorage.setItem("tasks", JSON.stringify(storedData))
-  console.log(this.task)
+  console.log(task)
 }
 
 // Create a "close" button and append it to each list item
@@ -67,10 +66,11 @@ function newElement() {
   li.appendChild(span);
 
   for (let i = 0; i < close.length; i++) {
+    let index = i
     close[i].onclick = function() {
       var div = this.parentElement;
       div.style.display = "none";
-      removeOneData(i)
+      removeOneData(index)
     }
   }
 }
@@ -96,10 +96,11 @@ function oldElement(){
     li.appendChild(span);
 
     for (let i = 0; i < close.length; i++) {
+      let index = i
       close[i].onclick = function() {
         var div = this.parentElement;
         div.style.display = "none";
-        removeOneData(i)
+        removeOneData(index)
       }
     }
   }
