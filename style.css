@@ -14,7 +14,7 @@ ul li {
     cursor: pointer;
     position: relative;
     padding: 12px 8px 12px 40px;
-    background: #eee;
+    background: #f44336;
     font-size: 18px;
     transition: 0.2s;
 
@@ -25,10 +25,10 @@ ul li {
     user-select: none;
 }
 
-/* Set all odd list items to a different color (zebra-stripes) */
+/* Set all odd list items to a different color (zebra-stripes) 
 ul li:nth-child(odd) {
     background: #f9f9f9;
-}
+}*/
 
 /* Darker background-color on hover */
 ul li:hover {
@@ -37,7 +37,7 @@ ul li:hover {
 
 /* When clicked on, add a background color and strike out text */
 ul li.checked {
-    background: #888;
+    background: #39ff14; 
     color: #fff;
     text-decoration: line-through;
 }
@@ -46,7 +46,7 @@ ul li.checked {
 ul li.checked::before {
     content: '';
     position: absolute;
-    border-color: #fff;
+    border-color: #000;
     border-style: solid;
     border-width: 0 2px 2px 0;
     top: 10px;
@@ -65,15 +65,15 @@ ul li.checked::before {
 }
 
 .close:hover {
-    background-color: #f44336;
+    background-color: #000;
     color: white;
 }
 
 /* Style the header */
 .header {
-    background-color: #f44336;
+    background-color: #ff9900;
     padding: 30px 40px;
-    color: white;
+    color: black;
     text-align: center;
 }
 
